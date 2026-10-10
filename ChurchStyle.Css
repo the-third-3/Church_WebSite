@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --base-clr:#11121a;
+  --line-clr:#9c9fb4;
+  --base-clr:#11121a;
+   --primary-color: #ee3e3;
+  --secondary-color: #f5f5f5;
+  --text-color: #090606;
+  --font-family: 'Roboto', sans-serif;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+}
+html{
+ 
+  font-family: var(--font-family);
+
+  line-height: 1.6rem;
+}
+body{
+   min-height: 100vh;
+   min-height: 100dvh;
+  background-color: black;
+  color:rgb(255, 255, 255);
+  display:grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 5px;
+
+}
+
+main{
+  padding: 2rem;
+}
+
+main p{
+  margin-bottom: 1rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.container{
+   border:1px solid var(--line-clr);
+   border-radius: 1em;
+   margin-bottom: 20px;
+   padding: min(3rem, 15%);
+  max-width: 1200px;
+  
+}
+
+h2,p{
+  margin-top: 1em;
+}
+
+h2{
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color:rgb(219, 128, 10);
+}
+#sidebar{
+  background-color: rgb(66, 2, 26);
+  color: var(--secondary-color);
+  box-sizing: border-box;
+  width: 250px;
+  height: 100vh;
+  padding: 5px 1em;
+  border-right:1px solid var(--line-clr);
+  list-style: none;
+  position: sticky;
+  top: 0px;
+  align-self:start;
+ 
+}
+#sidebar svg{
+  flex-shrink: 0;
+  color: var(--text-color);
+  fill: var(--text-color)
+}
+#sidebar a span, #sidebar .dropdown-btn span{
+ flex-grow: 1;
+
+ }
+#sidebar a span:hover, #sidebar .dropdown-btn span:hover{
+  background-color:rgb(205, 214, 205);
+  
+  
+}
+
+#sidebar > ul >li:first-child{
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 6px;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+
+}
+.logo{
+  font-weight: 700px;
+
+}
+#sidebar ul li.active a{
+  color:rgb(11, 14, 199);
+  .svg{
+    color:aquamarine
+  }
+}
+#sidebar a, #sidebar .dropdown-btn,#sidebar .logo{
+  border-radius: .5em;
+  padding:10px;
+  text-decoration: none;
+  color:white;
+  display: flex;
+  align-items: center;
+  gap:1em;
+
+
+}
+.dropdown-btn{
+  width:100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+.dropdown-btn svg{
+  transition: 200ms ;
+}
+#sidebar .sub-menu{
+ display: grid;
+ transition: 300ms ease-in-out;
+ grid-template-rows: 0fr;
+ >div{
+  overflow: hidden;
+ }
+}
+#sidebar .sub-menu a{
+  padding-left: 2em;
+  
+}
+#sidebar .sub-menu.show{
+  grid-template-rows: 1fr;
+
+}
+.rotate svg:last-child{
+  rotate:-180deg;
+}
+ #toggle-button{
+  margin-left: auto;
+  padding:1em;
+  border:none;
+  background: none;
+  border-radius: .5em;
+  cursor:pointer;
+ }
